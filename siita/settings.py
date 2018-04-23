@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'alumnos',
-    'carreras',
     'solicitud_tuto',
     
 ]
@@ -80,7 +79,7 @@ WSGI_APPLICATION = 'siita.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'siita-upv',
+        'NAME': 'siita_upv',
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
