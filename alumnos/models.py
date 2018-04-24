@@ -12,8 +12,8 @@ class Alumnos (models.Model):
     matricula = models.IntegerField(validators=[MaxValueValidator(9999999999)])
     
 
-    def __unicode__(self):
-        return self.id_alumno  # Python 2
+    def __unicode__(self):   # Python 2
+        return unicode(self.id_alumno)
 
 
     def __str__(self):  # Python 3

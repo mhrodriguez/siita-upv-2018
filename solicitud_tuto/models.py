@@ -6,9 +6,38 @@ from django.core.validators import MaxValueValidator
 
 # Create your models here.
 
+class Alumnos (models.Model):
+    id_alumno = models.AutoField(primary_key=True, validators=[MaxValueValidator(99999999999)])
+    nombres = models.CharField(max_length=45)
+    ap_paterno = models.CharField(max_length = 45)
+    ap_materno = models.CharField(max_length = 45)
+    matricula = models.IntegerField(validators=[MaxValueValidator(9999999999)])
+    
+
+    def __unicode__(self):   # Python 2
+        return unicode(self.id_alumno)
+
+
+    def __str__(self):  # Python 3
+        return self.id_alumno
+
+class Maestros (models.Model):
+    id_maestro = models.AutoField(primary_key=True, validators=[MaxValueValidator(99999999999)])
+    num_empleado = models.IntegerField(validators=[MaxValueValidator(99999999)])
+    nombres = models.CharField(max_length=45)
+    ap_paterno = models.CharField(max_length=45)
+    ap_materno = models.CharField(max_length=45)
+    carrera = models.CharField(max_length=15)
+
+    def __unicode__(self):    # Python 2
+        return unicode(self.id_maestro)
+
+    def __str__(self):        # Python 3
+        return self.id_maestro
+
 class Solicitudes_citas (models.Model):
     id_cita = models.AutoField(primary_key=True, validators=[MaxValueValidator(99999999999)])
-    id_alumno = models.IntegerField(validators=[MaxValueValidator(99999999999)])
+    id_alumno = models.ForeignKey(Alumnos)
     id_maestro = models.IntegerField(validators=[MaxValueValidator(99999999999)])
     tipo = models.CharField(max_length = 15)
     fecha = models.DateField()
@@ -16,8 +45,8 @@ class Solicitudes_citas (models.Model):
     comentarios = models.CharField(max_length = 225)
     
 
-    def __unicode__(self):
-        return self.id_cita  # Python 2
+    def __unicode__(self):   # Python 2
+        return unicode(self.id_cita)
 
 
     def __str__(self):  # Python 3
