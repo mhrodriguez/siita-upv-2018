@@ -9,7 +9,10 @@ from .forms import RegForm
 # Create your views here.
 
 def cita(request):
-    form = RegForm()
+    form = RegForm(request.POST or None)
+    if form.is_valid():
+        form_data = form.cleaned_data
+        abc = form_data.get("")
     context = {
         "form": form,
     }
