@@ -21,5 +21,5 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cita/', include ('solicitud_tuto.urls')),
-    url(r'^$', views.hello_django),
+    url(r'^$', views.hello_django, name="index"),
 ]
