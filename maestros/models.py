@@ -8,15 +8,14 @@ from django.core.validators import MaxValueValidator
 
 
 class Maestros (models.Model):
-    id_maestro = models.AutoField(primary_key=True, validators=[MaxValueValidator(99999999999)])
-    num_empleado = models.IntegerField(validators=[MaxValueValidator(99999999)])
+    num_empleado = models.IntegerField(primary_key=True, validators=[MaxValueValidator(99999999)])
     nombres = models.CharField(max_length=45)
     ap_paterno = models.CharField(max_length=45)
     ap_materno = models.CharField(max_length=45)
     carrera = models.CharField(max_length=15)
 
     def __unicode__(self):    # Python 2
-        return unicode(self.id_maestro)
+        return unicode(self.num_empleado)
 
     def __str__(self):        # Python 3
-        return self.id_maestro
+        return self.num_empleado

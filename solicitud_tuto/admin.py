@@ -7,7 +7,7 @@ from .models import Solicitudes_citas
 # Register your models here.
 
 class AdminSolicitudes_citas(admin.ModelAdmin):
-    list_display = ["__unicode__", "id_alumno", "id_maestro", "tipo", "fecha", "lugar", "comentarios"]
+    list_display = ["__unicode__", "matricula", "num_empleado", "tipo", "fecha", "lugar", "comentarios"]
     class Meta:
         model = Solicitudes_citas
 

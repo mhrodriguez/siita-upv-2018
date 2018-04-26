@@ -8,7 +8,7 @@ from .models import Alumnos
 # Register your models here.
 
 class AdminAlumnos(admin.ModelAdmin):
-    list_display = ["__unicode__", "nombres", "ap_paterno", "ap_materno", "matricula"]
+    list_display = ["__unicode__", "nombres", "ap_paterno", "ap_materno"]
     class Meta:
         model = Alumnos
 

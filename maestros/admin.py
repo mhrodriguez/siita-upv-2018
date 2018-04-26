@@ -7,7 +7,7 @@ from .models import Maestros
 # Register your models here.
 
 class AdminMaestros(admin.ModelAdmin):
-    list_display = ["__unicode__", "num_empleado", "nombres", "ap_paterno", "ap_materno", "carrera"]
+    list_display = ["__unicode__", "nombres", "ap_paterno", "ap_materno", "carrera"]
     class Meta:
         model = Maestros
 

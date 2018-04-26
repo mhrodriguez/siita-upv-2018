@@ -10,8 +10,8 @@ from maestros.models import Maestros
 
 class Solicitudes_citas (models.Model):
     id_cita = models.AutoField(primary_key=True, validators=[MaxValueValidator(99999999999)])
-    id_alumno = models.ForeignKey(Alumnos, on_delete=models.CASCADE)
-    id_maestro = models.ForeignKey(Maestros, on_delete=models.CASCADE)
+    matricula = models.ForeignKey(Alumnos, on_delete=models.CASCADE)
+    num_empleado = models.ForeignKey(Maestros, on_delete=models.CASCADE)
     tipo = models.CharField(max_length = 15)
     fecha = models.DateField()
     lugar = models.CharField(max_length = 45)

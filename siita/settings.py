@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'siita.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'siita',
+        'NAME': 'siita_upv',
         'USER': 'root',
-        'PASSWORD': 'ojasso12',
+        'PASSWORD': 'password',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'PORT': '80',
     }
 }
 
