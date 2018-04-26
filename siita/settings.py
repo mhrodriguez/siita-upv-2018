@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'alumnos',
     'solicitud_tuto',
     'login',
+    'horarios',
 
 ]
 
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'siita_upv',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'MIRELES753',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '80',
     }
