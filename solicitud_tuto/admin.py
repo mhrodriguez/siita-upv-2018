@@ -13,3 +13,4 @@ class AdminSolicitudes_citas(admin.ModelAdmin):
 
 admin.site.register(Solicitudes_citas, AdminSolicitudes_citas)
 
+
