@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from django.db import models
 
 # Create your models here.
@@ -10,10 +12,10 @@ class Alumnos (models.Model):
     ap_paterno = models.CharField(max_length = 45)
     ap_materno = models.CharField(max_length = 45)
     matricula = models.IntegerField(validators=[MaxValueValidator(9999999999)])
-    
+
 
     def __unicode__(self):
-        return self.id_alumno  # Python 2
+        return unicode(self.id_alumno)  # Python 2
 
 
     def __str__(self):  # Python 3

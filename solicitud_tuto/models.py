@@ -14,10 +14,10 @@ class Solicitudes_citas (models.Model):
     fecha = models.DateField()
     lugar = models.CharField(max_length = 45)
     comentarios = models.CharField(max_length = 225)
-    
+
 
     def __unicode__(self):
-        return self.id_cita  # Python 2
+        return unicode(self.id_cita)
 
 
     def __str__(self):  # Python 3

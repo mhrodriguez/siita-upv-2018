@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'alumnos',
     'solicitud_tuto',
-    
+    'login',
+
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'siita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,12 +79,12 @@ WSGI_APPLICATION = 'siita.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'siita_upv',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'siita',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'ojasso12',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '80',
+        'PORT': '3306',
     }
 }
 
