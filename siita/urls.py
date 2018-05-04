@@ -23,7 +23,11 @@ from solicitud_tuto import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cita/', include('solicitud_tuto.urls')),
-    url(r'^', include('login.urls')),
+    url(r'^login/', include('login.urls')),
+    url(r'^horario/', include('horarios.urls')),
+    url(r'^maestros/', include('maestros.urls')),
+ 
+
     # url(r'^accounts/', include('registration.backends.default.urls')),
 
 

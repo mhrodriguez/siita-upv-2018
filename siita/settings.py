@@ -26,7 +26,8 @@ SECRET_KEY = 'yl%49k-39)8u&qj#9@bhj(g%f-a+b0nps=3=b_^g%)749s9*&y'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+from unipath import Path
+RUTA_PROYECTO = Path(__file__).ancestor(2)
 
 # Application definition
 

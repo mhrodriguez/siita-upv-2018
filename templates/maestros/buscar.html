@@ -1,0 +1,13 @@
+<!--<h1> Ho </h1> -->
+{{ tem_titulo }}
+<hr/>
+<br/>
+
+
+<form method="POST" action="/horario/encontrado/">{% csrf_token %} 
+    {{ el_form }}
+    <input type="submit" value="Buscar" />
+
+</form>
+
+
